@@ -39,6 +39,6 @@ module.exports = async (bot, interaction, message) => {
             if (interaction.user.id != config.owner) return interaction.reply({ embeds: [emb] });
         }
 
-        command.run(bot, interaction, command.options)
+        command.run(bot, interaction, command.options).catch(error => console.log("Something went wrong...?"));
     }
 }

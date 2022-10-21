@@ -1,6 +1,7 @@
 const Discord = require("discord.js")
 const config = require("../config")
 const getUser = require("../api/methods/getUser")
+const createUser = require("../api/methods/createUser")
 
 module.exports = {
 

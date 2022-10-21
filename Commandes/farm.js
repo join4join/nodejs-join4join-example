@@ -14,6 +14,7 @@ module.exports = {
 
     async run(bot, message, args, member) {
         const farm_ = await farm(message.user.id);
+
         if (farm_ && farm_.success === true) {
             if (farm_ && farm_.data.length < 5) {
                 const emb = new Discord.EmbedBuilder()

@@ -22,6 +22,7 @@ async function request(endpoint, options = {}) {
 
     const body = options.body ?? undefined
 
+
     return (await fetch(`${config.api_url}/api/v1/${endpoint}`, {
         headers,
         method: options.method ?? 'GET',

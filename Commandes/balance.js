@@ -1,7 +1,6 @@
 const Discord = require("discord.js")
 const config = require("../config")
 const getUser = require("../api/methods/getUser")
-const createUser = require("../api/methods/createUser")
 
 module.exports = {
 
@@ -27,15 +26,6 @@ module.exports = {
             message.reply({ embeds: [emb] });
         } else {
             console.log(user_);
-            const emb = new Discord.EmbedBuilder()
-                .setColor(message.member.displayHexColor)
-                .setTitle('join4join.xyz | Error')
-                .setURL(config.url)
-                .setDescription(`Please login first [https://join4join.xyz/](https://join4join.xyz/) to have an account.`)
-                .setThumbnail(bot.user.displayAvatarURL())
-                .setFooter({ text: config.footer })
-                .setTimestamp()
-            message.reply({ embeds: [emb] });
         }
     }
 }

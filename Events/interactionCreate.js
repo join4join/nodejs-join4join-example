@@ -52,7 +52,7 @@ module.exports = async (bot, interaction, message) => {
                 await interaction.reply({ content: 'Please provide the amount of members you want to buy.' });
             } else if (user.coins < coins) {
                 await interaction.reply({ content: `You don't have enough coins.` });
-            } else if (!Number.isInteger(coins)) {
+            } else if (!Number.isInteger(parseInt(Number(coins)))) {
                 await interaction.reply({ content: `The amount of coins should be a number.` });
             } else if (coins < 3) {
                 await interaction.reply({ content: `You need to buy atleast for 3 members.` });
@@ -61,11 +61,12 @@ module.exports = async (bot, interaction, message) => {
             } else if (!["fr", "en", "tr", "all"].includes(filter_language)) {
                 await interaction.reply({ content: `Please provide en fr tr all for the filter language.` });
             } else {
-                const buy_api = await buy(interaction.user.id, interaction.guild.id, coins, "https://" + regex[0], filter_account, filter_language);
+                const buy_api = await buy(interaction.user.id, coins, "https://" + regex[0], filter_account, filter_language);
                 if (buy_api && buy_api.success === true) {
                     await interaction.reply({ content: `Please click [here](${buy_api.link}) to run your ad` });
                 } else {
-                    await interaction.reply({ content: `Something went wrong. Try again...` });
+                    console.log(buy_api)
+                    await interaction.reply({ content: `Something went wrong. Try again.` });
                 }
             }
         }
@@ -78,7 +79,7 @@ module.exports = async (bot, interaction, message) => {
                 await interaction.reply({ content: 'Please provide the amount of coins you want to give.' });
             } else if (user.coins < coins) {
                 await interaction.reply({ content: `You don't have enough coins.` });
-            } else if (!Number.isInteger(coins)) {
+            } else if (!Number.isInteger(parseInt(Number(coins)))) {
                 await interaction.reply({ content: `The amount of coins should be a number.` });
             } else if (!friend_id) {
                 await interaction.reply({ content: 'Please provide your friend id.' });
@@ -89,7 +90,8 @@ module.exports = async (bot, interaction, message) => {
                 if (pay_api && pay_api.success === true) {
                     await interaction.reply({ content: `Please click [here](${pay_api.link}) to accept the transfer` });
                 } else {
-                    await interaction.reply({ content: `Something went wrong. Try again...` });
+                    console.log(pay_api)
+                    await interaction.reply({ content: `Something went wrong. Try again.` });
                 }
             }
         }

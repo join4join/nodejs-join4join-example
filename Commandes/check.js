@@ -12,9 +12,7 @@ module.exports = {
     ownerOnly: false,
 
     async run(bot, message, args, member) {
-        console.log("ici");
         const check_ = await check(message.user.id, message.guild.id);
-        console.log(check_)
         if (check_ && check_.success === true && check_.data.check === false) {
             const emb = new Discord.EmbedBuilder()
                 .setColor(message.member.displayHexColor)

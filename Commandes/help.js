@@ -2,7 +2,6 @@ const Discord = require("discord.js")
 const config = require("../config")
 
 module.exports = {
-
     name: "help",
     description: "Displays bot commands.",
     permission: "None",

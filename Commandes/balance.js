@@ -5,7 +5,7 @@ const getUser = require("../api/methods/getUser")
 module.exports = {
 
     name: "balance",
-    description: "See the coins you have",
+    description: "See your balance.",
     permission: "None",
     dm: false,
     adminOnly: false,
@@ -13,7 +13,6 @@ module.exports = {
 
     async run(bot, message, args, member) {
         const user_ = await getUser(message.user.id);
-
         if (user_ && user_.success === true) {
             const emb = new Discord.EmbedBuilder()
                 .setColor(message.member.displayHexColor)

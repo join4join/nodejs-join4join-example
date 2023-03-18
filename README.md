@@ -26,4 +26,4 @@ A guide to install NodeJS and DiscordJS: https://discordjs.guide/preparations/#i
 
 Your Join4Join bot is ready enjoy!
 - Developers receive 0.10 coins for each server farm with their bot from users create with the api.
-- You can receive help here: https://discord.com/invite/dmu92HwAEU
+- You can receive help here: https://discord.gg/tpEjXeZeVb

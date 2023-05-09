@@ -18,7 +18,7 @@ module.exports = {
                 .setColor(message.member.displayHexColor)
                 .setTitle('join4join.xyz | Balance')
                 .setURL(config.url)
-                .setDescription(`You have \`${user_.data.coins}\` coins\n> Earn more coins here [https://join4join.xyz/](https://join4join.xyz/)`)
+                .setDescription(`You have \`${user_.data.coins}\` coins\n> Earn more coins here [join4join.xyz/](https://join4join.xyz/)`)
                 .setThumbnail(bot.user.displayAvatarURL())
                 .setFooter({ text: config.footer })
                 .setTimestamp()

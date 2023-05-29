@@ -43,7 +43,7 @@ module.exports = {
                 \`${guild_3.data.name}\`\n> [Click here to join](${guild_3.data.invite})\n> **Order: ${guild_3.data.invitation_update}/${guild_3.data.invitation_request}**\n
                 \`${guild_4.data.name}\`\n> [Click here to join](${guild_4.data.invite})\n> **Order: ${guild_4.data.invitation_update}/${guild_4.data.invitation_request}**\n
                 \`${guild_5.data.name}\`\n> [Click here to join](${guild_5.data.invite})\n> **Order: ${guild_5.data.invitation_update}/${guild_5.data.invitation_request}**
-                \n\n**After joining some servers [click here](join4join.xyz/claim) to get your coins.**`)
+                \n\n**After joining some servers [click here](https://join4join.xyz/claim) to get your coins.**`)
                     .setThumbnail(bot.user.displayAvatarURL())
                     .setFooter({ text: config.footer })
                     .setTimestamp()

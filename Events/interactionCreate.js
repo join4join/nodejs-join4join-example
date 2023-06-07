@@ -35,7 +35,11 @@ module.exports = async (bot, interaction, message) => {
             if (interaction.user.id != config.owner) return interaction.reply({ embeds: [emb] });
         }
 
-        command.run(bot, interaction, command.options)//.catch(error => console.log("Something went wrong...?"));
+        try {
+            command.run(bot, interaction, command.options)//.catch(error => console.log("Something went wrong...?"));
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     if (interaction.isModalSubmit()) {

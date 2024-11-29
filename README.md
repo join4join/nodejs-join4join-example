@@ -9,7 +9,7 @@ example of join4join bot using the join4join api (https://join4join.xyz/document
 A guide to install NodeJS and DiscordJS: https://discordjs.guide/preparations/#installing-node-js
 
 > Step 1
-- Generate your api key on the website (https://join4join.xyz/profile)
+- Generate your api key on the website (https://join4join.xyz/dashboard/settings?developer)
 
 > Step 2 
 - Download the code
@@ -26,4 +26,6 @@ A guide to install NodeJS and DiscordJS: https://discordjs.guide/preparations/#i
 
 Your Join4Join bot is ready enjoy!
 - Developers receive 0.10 coins for each server farm with their bot from users create with the api.
-- You can receive help here: https://discord.gg/tpEjXeZeVb
+- You can receive help here: https://discord.gg/growing
+
+### FREE DISCORD BOT HOSTING: https://bot-hosting.net

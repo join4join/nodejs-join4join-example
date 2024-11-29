@@ -13,7 +13,7 @@ module.exports = async bot => {
         await bot.user.setActivity(activitys[Math.floor(Math.random() * activitys.length)]);
     }, 120000);
 
-    console.log("You need help? join here ---> https://discord.gg/DSnQqJuppA")
+    console.log("You need help? join here ---> https://join4join.xyz/discord")
     console.log("Join4Join website ---> https://join4join.xyz")
     console.log("Host this bot for free ---> https://bot-hosting.net")
 }

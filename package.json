@@ -1,17 +1,31 @@
 {
-  "name": "join4join-v14",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "name": "join4join-bot-example",
+  "version": "2.0.0",
+  "description": "Open-source Join4Join Discord bot built on the Join4Join API. Fork it, run it, and grow your own community for free.",
+  "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development node index.js",
+    "deploy": "node index.js --deploy-only"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "join4join",
+    "discord.js",
+    "api"
+  ],
   "author": "Grality",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@discordjs/rest": "^1.0.1",
-    "discord.js": "^14.2.0",
-    "fs": "^0.0.1-security",
-    "node-fetch": "^2.6.7"
+    "discord.js": "^14.27.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }

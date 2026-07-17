@@ -1,4 +1,4 @@
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle, MessageFlags } = require("discord.js");
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 const { build, error } = require("../utils/embeds");
 
 const MAX_SERVERS = 5;
@@ -73,7 +73,7 @@ module.exports = {
     dmPermission: true,
 
     async execute(interaction, ctx) {
-        await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+        await interaction.deferReply();
         const view = await buildFarmView(ctx, interaction.user.id);
         await interaction.editReply(view);
     },

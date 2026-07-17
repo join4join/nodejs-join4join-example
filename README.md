@@ -1,8 +1,8 @@
-# Join4Join — Open-Source Discord Bot
+# Join4Join - Open-Source Discord Bot
 
 A clean, ready-to-fork [Join4Join](https://join4join.xyz) bot built on the official
 [Join4Join API](https://join4join.xyz/documentation). Run your own bot, grow Discord
-servers for free — and **earn developer rewards** every time your users farm.
+servers for free - and **earn developer rewards** every time your users farm.
 
 > Every user who uses **your** bot is automatically affiliated to your API key.
 > You earn **3 coins per referral** + **0.10 coins per server they farm**. Passive income. 🚀
@@ -13,6 +13,12 @@ servers for free — and **earn developer rewards** every time your users farm.
   <a href="https://join4join.xyz/support">Support</a>
 </p>
 
+<p align="center">
+  <a href="https://bot-hosting.net/deploy?source=template&template=nodejs-join4join-example">
+    <img src="https://bot-hosting.net/assets/deploy-badge.svg" alt="Deploy on Bot-Hosting">
+  </a>
+</p>
+
 ---
 
 HOST THE BOT FOR FREE: [bot-hosting.net](https://bot-hosting.net?utm_source=github&utm_medium=readme&utm_campaign=nodejs-join4join-example&aff=grality)
@@ -21,12 +27,12 @@ HOST THE BOT FOR FREE: [bot-hosting.net](https://bot-hosting.net?utm_source=gith
 
 ## ✨ Features
 
-- **10 slash commands** — `help`, `invite`, `balance`, `daily`, `farm`, `info`, `check`, `buy`, `pay`, `stats`
-- **Multi-language** 🇬🇧 🇫🇷 🇹🇷 — every user sees the bot in their own Discord language, automatically
-- **Intuitive UX** — `/pay @user amount` and `/buy` with inline options, no clunky forms
-- **Interactive farming** — one-click *Join* buttons, *Claim* and *Refresh*
-- **Robust** — timeouts, deferred replies (no more "This interaction failed"), clean error embeds
-- **Easy to fork** — tidy structure, commented code, zero boilerplate to add a command
+- **10 slash commands** - `help`, `invite`, `balance`, `daily`, `farm`, `info`, `check`, `buy`, `pay`, `stats`
+- **Multi-language** 🇬🇧 🇫🇷 🇹🇷 - every user sees the bot in their own Discord language, automatically
+- **Intuitive UX** - `/pay @user amount` and `/buy` with inline options, no clunky forms
+- **Interactive farming** - one-click *Join* buttons, *Claim* and *Refresh*
+- **Robust** - timeouts, deferred replies (no more "This interaction failed"), clean error embeds
+- **Easy to fork** - tidy structure, commented code, zero boilerplate to add a command
 
 ## 📦 Requirements
 
@@ -51,7 +57,7 @@ cp .env.example .env      # then open .env and fill it in
 npm start
 ```
 
-That's it — your Join4Join bot is live! 🎉
+That's it - your Join4Join bot is live! 🎉
 
 ### Configuration (`.env`)
 
@@ -59,9 +65,9 @@ That's it — your Join4Join bot is live! 🎉
 | ----------------- | :------: | --------------------------------------------------------------------- |
 | `TOKEN`           |    ✅    | Your Discord bot token                                                |
 | `API_KEY`         |    ✅    | Your Join4Join API key (users get affiliated to it)                   |
-| `BOT_INVITE_LINK` |    –     | The link people use to add your bot to their servers                  |
-| `GUILD_ID`        |    –     | A test server ID — registers commands **instantly** during dev        |
-| `ADMIN` / `OWNER` |    –     | Comma-separated Discord IDs allowed to run admin/owner-only commands  |
+| `BOT_INVITE_LINK` |    -     | The link people use to add your bot to their servers                  |
+| `GUILD_ID`        |    -     | A test server ID - registers commands **instantly** during dev        |
+| `ADMIN` / `OWNER` |    -     | Comma-separated Discord IDs allowed to run admin/owner-only commands  |
 
 > During development, set `GUILD_ID` so slash commands appear instantly.
 > In production, leave it empty to register commands **globally** (can take up to 1h).
@@ -77,8 +83,8 @@ That's it — your Join4Join bot is live! 🎉
 | `/farm`   | Get servers to join and earn coins (with Join / Claim buttons)     |
 | `/info`   | Join4Join info about the current server                            |
 | `/check`  | Check if you can leave a server without losing coins               |
-| `/buy`    | `/buy invite members [language] [filter_alts]` — advertise a server|
-| `/pay`    | `/pay user amount` — send coins to a friend                        |
+| `/buy`    | `/buy invite members [language] [filter_alts]` - advertise a server|
+| `/pay`    | `/pay user amount` - send coins to a friend                        |
 | `/stats`  | Your developer earnings & affiliation stats (owner-only)          |
 
 > `/stats` shows **your** affiliation revenue (you earn 0.10 coins each time one
@@ -123,7 +129,7 @@ module.exports = {
 ```
 
 Add `ping: "Check the bot latency."` under `commands` in each locale file, then restart.
-The command loads and registers itself — no wiring needed.
+The command loads and registers itself - no wiring needed.
 
 Each command receives a `ctx` object:
 

@@ -27,7 +27,7 @@ module.exports = {
     },
 
     async execute(interaction, ctx) {
-        await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+        await interaction.deferReply();
 
         const target = interaction.options.getUser("user");
         const amount = interaction.options.getInteger("amount");
@@ -47,16 +47,26 @@ module.exports = {
             return interaction.editReply({ embeds: [error(ctx, res?.message || ctx.t("common.error"))] });
         }
 
-        // A "/transfer/" link means YOU — the sender who ran the command — must
-        // confirm the transfer on the website (you authorize spending your own
-        // coins). Otherwise the coins were sent directly. The recipient never
-        // has to do anything.
+        // A "/transfer/" link means YOU (the sender) must confirm the transfer
+        // on the website. That link is personal, so this message stays private
+        // even though the rest of /pay is public. Otherwise the coins were sent
+        // directly and everyone can see it.
         const needsConfirmation = typeof res.link === "string" && res.link.includes("/transfer/");
-        const description = needsConfirmation
-            ? ctx.t("pay.confirm", { user: target.toString(), link: localizeLink(res.link), coins: amount })
-            : ctx.t("pay.sentDirect", { user: target.toString(), coins: amount });
 
-        const embed = build(ctx, { title: ctx.t("pay.successTitle"), description });
+        if (needsConfirmation) {
+            const embed = build(ctx, {
+                title: ctx.t("pay.successTitle"),
+                description: ctx.t("pay.confirm", { user: target.toString(), link: localizeLink(res.link), coins: amount }),
+            });
+            // Replace the public "thinking" reply with an ephemeral confirmation.
+            await interaction.deleteReply();
+            return interaction.followUp({ embeds: [embed], flags: MessageFlags.Ephemeral });
+        }
+
+        const embed = build(ctx, {
+            title: ctx.t("pay.successTitle"),
+            description: ctx.t("pay.sentDirect", { user: target.toString(), coins: amount }),
+        });
         await interaction.editReply({ embeds: [embed] });
     },
 };

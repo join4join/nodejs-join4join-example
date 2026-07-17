@@ -4,8 +4,9 @@ A clean, ready-to-fork [Join4Join](https://join4join.xyz) bot built on the offic
 [Join4Join API](https://join4join.xyz/documentation). Run your own bot, grow Discord
 servers for free - and **earn developer rewards** every time your users farm.
 
-> Every user who uses **your** bot is automatically affiliated to your API key.
-> You earn **3 coins per referral** + **0.10 coins per server they farm**. Passive income. 🚀
+> **Every user your bot creates is automatically affiliated to your API key.**
+> You earn **+0.10 coins** each time one of them farms a server, plus **+10 coins** for
+> every new user who signs up through your affiliate link. Passive income. 🚀
 
 <p align="center">
   <a href="https://join4join.xyz">Website</a> •
@@ -33,6 +34,24 @@ HOST THE BOT FOR FREE: [bot-hosting.net](https://bot-hosting.net?utm_source=gith
 - **Interactive farming** - one-click *Join* buttons, *Claim* and *Refresh*
 - **Robust** - timeouts, deferred replies (no more "This interaction failed"), clean error embeds
 - **Easy to fork** - tidy structure, commented code, zero boilerplate to add a command
+
+## 💰 Developer rewards
+
+Running your own Join4Join bot pays you back. **Every user your bot creates is
+automatically affiliated to your API key** (their account is linked to you the first
+time they appear in any API call), and you earn coins from what they do:
+
+| Reward | When it's paid | Amount |
+| ------ | -------------- | ------ |
+| **Affiliation signup** | A new user signs up on [join4join.xyz](https://join4join.xyz) through **your affiliate link** | **+10 coins** |
+| **Farm** | One of your affiliated users farms a server (real account, not an alt) | **+0.10 coins** |
+
+> 💡 The **+10 signup bonus** is credited when someone registers on the website via
+> your affiliate link (grab it from your [dashboard](https://join4join.xyz/dashboard/settings)),
+> so don't hesitate to share it in your bot. The **+0.10 per farm** is fully automatic
+> for every user your bot creates.
+
+Track your earnings anytime with `/stats`.
 
 ## 📦 Requirements
 
